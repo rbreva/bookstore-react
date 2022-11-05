@@ -1,12 +1,12 @@
 import React from 'react';
 import {
   BrowserRouter,
-  NavLink,
   Route,
   Routes,
 } from 'react-router-dom';
 import Books from './components/Books';
 import Categories from './components/Categories';
+import NavBar from './components/NavBar';
 
 class App extends React.PureComponent {
   render() {
@@ -15,10 +15,7 @@ class App extends React.PureComponent {
         <div>
           <header>
             <h1>Bookstore CMS</h1>
-            <nav>
-              <NavLink to="/">Books</NavLink>
-              <NavLink to="/categories">Categories</NavLink>
-            </nav>
+            <NavBar />
           </header>
           <main>
             <Routes>

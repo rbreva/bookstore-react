@@ -12,7 +12,7 @@ const categories = createSlice({
   reducers: {
     checkCategories(state, action) {
       if (action.payload === CHECK) {
-        // console.log('Check Status');
+        <div>Under construction</div>;
       }
     },
   },

@@ -18,7 +18,9 @@ const booksSlice = createSlice({
     },
     deleteBooks(state, action) {
       if (REMOVE_BOOK) {
-        state.books.filter((book) => book.id !== action.payload);
+        const temp = state.books.filter((book) => book.id !== action.payload);
+        // eslint-disable-next-line
+        state.books = temp;
       }
     },
   },

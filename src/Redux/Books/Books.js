@@ -58,7 +58,6 @@ const booksSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(getBooks.fulfilled, (state, action) => {
-      // console.log('fulfilled');
       let temp = action.payload;
       const arr = [];
       temp = JSON.parse(temp);
@@ -68,30 +67,6 @@ const booksSlice = createSlice({
       });
       // eslint-disable-next-line
       state.books = arr;
-    });
-    builder.addCase(getBooks.pending, () => {
-      // console.log('Bet Books pending');
-    });
-    builder.addCase(getBooks.rejected, () => {
-      // console.log('Get Books rejected');
-    });
-    builder.addCase(postBook.fulfilled, () => {
-      // state.books.push(action.payload);
-    });
-    builder.addCase(postBook.pending, () => {
-    // console.log('pending');
-    });
-    builder.addCase(postBook.rejected, () => {
-      // console.log('rejected');
-    });
-    builder.addCase(deleteBookAPI.fulfilled, () => {
-      // console.log('fulfilled');
-    });
-    builder.addCase(deleteBookAPI.pending, () => {
-      // console.log('pending');
-    });
-    builder.addCase(deleteBookAPI.rejected, () => {
-      // console.log('rejected');
     });
   },
 });

@@ -1,6 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;400&display=swap');
+
+/* -------Generales---------- */
+
+:root {
+  --bubble-gum-pink: #ff5ab7;
+  --black: #1e1e1e;
+  --pinkish-grey: #c7c7c7;
+  --very-light-pink: #c4c4c4;
+  --pale-grey: #f5f6fa;
+  --black-5: rgba(0, 0, 0, 0.05);
+  --fff: #fafafa;
+  --black-two: #121212;
+  --medium-blue: #307bbe;
+  --azure: #0290ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
 }
 
 li {
@@ -8,5 +43,6 @@ li {
 }
 
 body {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+  background-color: var(--pale-grey);
 }

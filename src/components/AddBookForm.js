@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBooks } from '../Redux/Books/Books';
+import { postBook, addBooks } from '../Redux/Books/Books';
 
 function AddBookForm() {
   const [title, setTitle] = useState('');
@@ -15,8 +15,11 @@ function AddBookForm() {
       id,
       title,
       author,
+      category: 'ND',
     };
-    dispatch(addBooks(book));
+    dispatch(postBook(book)).then(
+      () => dispatch(addBooks(book)),
+    );
     setTitle('');
     setAuthor('');
   };
